@@ -1,0 +1,17 @@
+<script>
+    $(document).ready(function () {
+        $(".navbar-collapse > ul > li > a").css('padding', 0);
+        responsiveMenu($(".navbar-collapse > ul > li").length);
+    });
+
+    function responsiveMenu(listItens) {
+        var aux = (($(".navbar-collapse").width() - $(".navbar-nav").width()) / listItens)/2;
+
+        $(".navbar-collapse > ul > li > a").each(function () {
+            $(this).css('padding-top', 14);
+            $(this).css('padding-bottom', 14);
+            $(this).css('padding-left', aux);
+            $(this).css('padding-right', aux);
+        });
+    }
+</script>
